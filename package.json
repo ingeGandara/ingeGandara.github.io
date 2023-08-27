@@ -1,7 +1,7 @@
 {
   "name": "servidor_web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Server para diseño electrónico",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
