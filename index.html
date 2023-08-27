@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizador de Mensajes</title>
+</head>
+<body>
+  <h1>Coordenadas GPS</h1>
+  <div id="mensaje"></div>
+
+  <script>
+    const ws = new WebSocket('ws://localhost:3000'); // Conéctate al servidor WebSocket
+
+    ws.addEventListener('message', (event) => {
+      // Procesa y muestra el remitente y el mensaje en tiempo real
+      const data = JSON.parse(event.data);
+      document.getElementById('mensaje').innerHTML = `
+        Remitente: ${data.remitente}<br>
+        Mensaje: ${data.mensaje}
+      `;
+    });
+
+    // Recargar la página cada 10 segundos
+    //setTimeout(() => {
+    //  location.reload();
+    //}, 10000);
+  </script>
+</body>
+</html>
