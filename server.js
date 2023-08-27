@@ -47,11 +47,7 @@ app.get('/mensaje', (req, res) => {
 
 
 // Configura WebSocket para actualización en tiempo real
-//wss.on('connection', (ws) => {
-  // Aquí puedes enviar actualizaciones en tiempo real a los clientes conectados
-//});
 
-// Dentro de la sección WebSocket
 wss.on('connection', (ws) => {
   // Cada vez que un cliente se conecte, consulta el último registro y envíalo
   conexionDB.query('SELECT remitente, mensaje FROM mensajes ORDER BY id DESC LIMIT 1', (error, resultados) => {
