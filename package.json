@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "http": "^0.0.1-security",
     "mysql2": "^3.6.0",
     "ws": "^8.13.0"
   }
