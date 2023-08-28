@@ -75,7 +75,7 @@ app.get('/coordenadas', (req, res) => {
 });
   
 
-const puerto = 3000; // Puerto en el que se ejecutará el servidor
+const puerto = 3001; // Puerto en el que se ejecutará el servidor
 server.listen(puerto, () => {
   console.log(`Servidor web en ejecución en http://localhost:${puerto}`);
 });
