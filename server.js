@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 // Configura tu base de datos
 const conexionDB = mysql.createConnection({
-  host: '0.0.0.0',
+  host: 'localhost',
   user: 'root',
   password: '123456',
   database: 'ubicaciones',
